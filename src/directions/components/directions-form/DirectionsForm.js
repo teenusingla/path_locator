@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { maps } from "../../../common/services";
-import InputControl from "../input-map";
+import InputControl from "../../../common/components/input-map";
 import "./DirectionsForm.scss";
 
 /**

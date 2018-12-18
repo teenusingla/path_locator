@@ -1,5 +1,5 @@
-import { restClient } from '../../../common/services/';
-import { API_CONSTANTS } from '../../config';
+import { apiWrapper } from "../../../common/services/";
+import { API_CONSTANTS } from "../../config";
 
 /**
  * @name fetchRoute
@@ -8,11 +8,11 @@ import { API_CONSTANTS } from '../../config';
  * @returns Route Info
  */
 const fetchRoute = async token => {
-    const url = `${API_CONSTANTS.route}/${token}`;
-    const response = await restClient.get(url);
-    const { data } = response;
+  const url = `${API_CONSTANTS.route}/${token}`;
+  const response = await apiWrapper.get(url);
+  const { data } = response;
 
-    return data;
+  return data;
 };
 
 /**
@@ -22,17 +22,17 @@ const fetchRoute = async token => {
  * @param to Drop-off Point
  */
 const fetchToken = async (from, to) => {
-    const url = API_CONSTANTS.route;
-    const request = {
-        from,
-        to
-    };
+  const url = API_CONSTANTS.route;
+  const request = {
+    from,
+    to
+  };
 
-    const response = await restClient.post(url, request);
+  const response = await apiWrapper.post(url, request);
 
-    const { data } = response;
+  const { data } = response;
 
-    return data.token;
+  return data.token;
 };
 
 /**
@@ -42,19 +42,19 @@ const fetchToken = async (from, to) => {
  * @param to Drop-off Point
  */
 const fetchDirections = async (from, to) => {
-    const token = await fetchToken(from, to);
-    let result = await fetchRoute(token);
+  const token = await fetchToken(from, to);
+  let result = await fetchRoute(token);
 
-    // if status is 'in progress' then retry the request again
-    if (
-        result &&
-        result.status &&
-        result.status.toLowerCase() === 'in progress'
-    ) {
-        result = await fetchDirections(from, to);
-    }
+  // if status is 'in progress' then retry the request again
+  if (
+    result &&
+    result.status &&
+    result.status.toLowerCase() === "in progress"
+  ) {
+    result = await fetchDirections(from, to);
+  }
 
-    return result;
+  return result;
 };
 
 export { fetchDirections, fetchToken, fetchRoute };
