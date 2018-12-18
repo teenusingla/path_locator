@@ -1,0 +1,14 @@
+.path-finder-container {
+  display: block;
+  width: 100%;
+}
+
+.location-form-container {
+  width: 20%;
+  float: left;
+  margin-left: 10px;
+}
+
+.map-form-container {
+  width: 80%;
+}
