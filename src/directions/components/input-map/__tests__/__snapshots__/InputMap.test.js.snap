@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputMap /> component should match the snapshot 1`] = `
+<div
+  className="rows"
+>
+  <p />
+  <input
+    className="input-map"
+    onChange={[Function]}
+    type="text"
+  />
+</div>
+`;

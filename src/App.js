@@ -1,11 +1,13 @@
-import React, { Component } from "react";
-import PathFinder from "./pathFinderLocation";
+import React, { Component } from 'react';
+
+import Directions from './directions/Directions';
+
+import './App.scss';
 
 class App extends Component {
-  state = {};
-  render() {
-    return <PathFinder />;
-  }
+    render() {
+        return <Directions />;
+    }
 }
 
 export default App;
