@@ -8,7 +8,6 @@ import "./Directions.scss";
 /**
  * @type {Component}
  * @name Directions
- * @description Directions components (Main view of directions module)
  */
 class Directions extends Component {
   /**
@@ -39,7 +38,7 @@ class Directions extends Component {
 
     this.toggleLoader(false);
 
-    // check for response error
+    // error handler
     if (response && response.error) {
       this.showErrorMessage(response.error);
       return;
@@ -55,7 +54,7 @@ class Directions extends Component {
 
   /**
    * @description Hide and show loader
-   * @param isLoading Boolean indicating that loader is shown or not
+   * @param isLoading Boolean
    */
   toggleLoader = isLoading => {
     this.setState(() => ({
@@ -65,8 +64,8 @@ class Directions extends Component {
 
   /**
    * @name showErrorMessage
-   * @description This method display the error message
-   * @param message Message to be displayed
+   * @description error handler
+   * @param message
    */
   showErrorMessage = message => {
     this.toggleLoader(false);
@@ -77,7 +76,7 @@ class Directions extends Component {
   };
 
   /**
-   * @description Render method of the component
+   * @description It contains loader, search form and map
    */
   render() {
     const { directionsResponse, isLoading } = this.state;

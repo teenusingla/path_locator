@@ -7,7 +7,7 @@ import "./DirectionsForm.scss";
  * @name DirectionsForm
  * @type {Component}
  * @extends Component React component
- * @description This component contins the auto complete form
+ * @description This component contains the auto complete form
  */
 class DirectionsForm extends Component {
   constructor() {
