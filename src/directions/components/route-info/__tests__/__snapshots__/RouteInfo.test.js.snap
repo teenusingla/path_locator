@@ -5,31 +5,31 @@ exports[`<RouteInfo /> component should match the snapshot 1`] = `
   className="route-info"
 >
   <div
-    className="route-info-item"
+    className="display-info"
   >
     <div
-      className="route-info-item-label"
+      className="label"
     >
       Distance
       : 
     </div>
     <div
-      className="route-info-item-value"
+      className="value"
     >
        
     </div>
   </div>
   <div
-    className="route-info-item"
+    className="display-info"
   >
     <div
-      className="route-info-item-label"
+      className="label"
     >
       Time
       : 
     </div>
     <div
-      className="route-info-item-value"
+      className="value"
     >
        
     </div>

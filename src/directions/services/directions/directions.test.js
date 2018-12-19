@@ -1,5 +1,5 @@
 import * as directions from "../directions";
-import { restClient } from "../../../common/services/rest-client/rest-client";
+import { apiWrapper } from "../../../common/services/api-wrapper/api-wrapper";
 
 const apiStub = {
   status: "success",
@@ -18,7 +18,7 @@ const tokenStub = {
 
 describe("Test for directions api", () => {
   it("Should test for fetchToken method", async () => {
-    const post = jest.spyOn(restClient, "post");
+    const post = jest.spyOn(apiWrapper, "post");
 
     post.mockImplementation(() => Promise.resolve({ data: tokenStub }));
 
@@ -28,7 +28,7 @@ describe("Test for directions api", () => {
   });
 
   it("Should test for fetchRoute method", async () => {
-    const get = jest.spyOn(restClient, "get");
+    const get = jest.spyOn(apiWrapper, "get");
 
     get.mockImplementation(() => Promise.resolve({ data: apiStub }));
 
@@ -39,8 +39,8 @@ describe("Test for directions api", () => {
   });
 
   it("Should test for fetchDirections method", async () => {
-    const get = jest.spyOn(restClient, "get");
-    const post = jest.spyOn(restClient, "post");
+    const get = jest.spyOn(apiWrapper, "get");
+    const post = jest.spyOn(apiWrapper, "post");
 
     post.mockImplementation(() =>
       Promise.resolve({
