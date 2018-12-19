@@ -10,7 +10,7 @@ Backend [mockApi](https://github.com/lalamove/challenge/tree/master/mockApi) sho
 
 Create a `.env` file in the root directory of the project and add the following line and update the `Google` Api key
 
-REACT_APP_GOOGLE_API_KEY=<Google Api key>
+REACT_APP_GOOGLE_API_KEY="Google Api key"
 
 ## Available Scripts
 
