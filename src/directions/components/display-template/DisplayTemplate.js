@@ -16,4 +16,4 @@ const DisplayTemplate = ({ label, value }) => (
   </div>
 );
 
-export { DisplayTemplate };
+export default DisplayTemplate;

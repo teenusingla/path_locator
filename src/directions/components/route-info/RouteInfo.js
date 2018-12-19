@@ -1,5 +1,5 @@
 import React from "react";
-import { DisplayTemplate } from "../display-template/DisplayTemplate";
+import DisplayTemplate from "../display-template/DisplayTemplate";
 
 import "./RouteInfo.scss";
 

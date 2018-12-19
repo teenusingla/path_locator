@@ -6,4 +6,4 @@ export const googleAPIKey = "AIzaSyBG0SybP0EKWH3Jvwki7IR5AMyO_cUeeQc";
 
 //export const baseUrl = `https://directions-api.herokuapp.com/`;
 
-export const baseUrl = `http://localhost:3001`;
+export const baseUrl = `http://localhost:8080`;
